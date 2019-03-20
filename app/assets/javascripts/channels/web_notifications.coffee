@@ -6,4 +6,4 @@ App.web_notifications = App.cable.subscriptions.create "WebNotificationsChannel"
     # Called when the subscription has been terminated by the server
 
   received: (data) ->
-    $('#messages').append data['message']
+    document.querySelector("#messages").innerHTML = data['message']
