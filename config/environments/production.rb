@@ -43,7 +43,6 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   # config.action_cable.mount_path = nil
-  puts "------------ #{ENV['CABLE_URL']} ---------------"
   config.action_cable.url = ENV['CABLE_URL']
   # config.action_cable.allowed_request_origins = [ 'http://example.com', /http:\/\/example.*/ ]
 

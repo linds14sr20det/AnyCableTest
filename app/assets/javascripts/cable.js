@@ -8,6 +8,6 @@
 (function() {
   this.App || (this.App = {});
 
-  App.cable = ActionCable.createConsumer();
+  App.cable = ActionCable.createConsumer("wss://anycable-demo1-rpc.herokuapp.com/cable");
 
 }).call(this);
