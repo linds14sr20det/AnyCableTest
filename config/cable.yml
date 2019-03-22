@@ -5,5 +5,4 @@ development: *redis
 test: *redis
 
 production:
-  adapter: redis
-  url: <%=ENV['REDIS_URL']%>
+  adapter: any_cable
