@@ -3,5 +3,5 @@
 if [ "$ANYCABLE_DEPLOYMENT" == "true" ]; then
   RAILS_ENV=production bundle exec anycable --server-command="anycable-go"
 else
-  RAILS_ENV=production bundle exec rails server -p $PORT -b 0.0.0.0
+  bundle exec rails server -p $PORT -b 0.0.0.0
 fi
