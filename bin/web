@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bundle exec anycable --server-comand="anycable-go"
