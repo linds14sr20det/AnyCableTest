@@ -36,6 +36,15 @@ gem 'redis', '~> 4.0'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
+if ENV["LOCAL_CABLE"]
+  gem 'anycable', path: '../anycable'
+  gem 'anycable-rails', path: '../anycable-rails'
+else
+  gem 'anycable-rails', '~> 0.6.2'
+end
+
+gem 'anycable-rack-server', require: ENV["ANYCABLE_RACK"] ? "anycable-rack-server" : false
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
